@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nandana K A — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─────────── NAV ─────────── -->
+<header class="nav">
+  <a class="nav__brand" href="#top">
+    <span class="nav__mark">N</span>
+    <span class="nav__name">Nandana K A</span>
+  </a>
+  <nav class="nav__links">
+    <a href="#work">Selected Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="nav__cta" href="#contact">
+    <span>Get in touch</span>
+    <svg width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M1 4.5 H11 M7.5 1 L11 4.5 L7.5 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
+  </a>
+</header>
+
+<main id="top">
+
+<!-- ─────────── HERO ─────────── -->
+<section class="hero">
+  <div class="hero__grid">
+    <div class="hero__col hero__col--text">
+      <div class="eyebrow reveal">
+        <span class="dot"></span>
+        Available for new roles · 2026
+      </div>
+
+      <h1 class="display reveal" data-delay="60">
+        <span class="display__line">Nandana</span>
+        <span class="display__line"><em>K&nbsp;A.</em></span>
+      </h1>
+
+      <p class="tagline reveal" data-delay="140" data-typewriter="Turning a million PDFs into a million answers.">
+        <span class="tagline__text"></span><span class="tagline__caret" aria-hidden="true"></span>
+      </p>
+
+      <p class="lede reveal" data-delay="220">
+        Software engineer shipping <em>scalable backend systems</em> and
+        ML&#8209;driven pipelines that make sense of messy financial data —
+        at the scale of <span class="num">30,000</span> bank statements a day.
+      </p>
+
+      <dl class="hero__meta reveal" data-delay="300">
+        <div><dt>Role</dt><dd>SDE, Perfios</dd></div>
+        <div><dt>Based</dt><dd>Bangalore, IN</dd></div>
+        <div><dt>Stack</dt><dd>Python · R · GCP</dd></div>
+        <div><dt>Since</dt><dd>Aug 2023</dd></div>
+      </dl>
+    </div>
+
+    <figure class="hero__col hero__col--photo reveal" data-delay="80">
+      <div class="photo">
+        <img src="assets/profile.jpg" alt="Portrait of Nandana K A in front of a compass-and-globe mural at PES University." />
+        <div class="photo__corner photo__corner--tl"></div>
+        <div class="photo__corner photo__corner--tr"></div>
+        <div class="photo__corner photo__corner--bl"></div>
+        <div class="photo__corner photo__corner--br"></div>
+      </div>
+      <figcaption>
+        <span class="figcaption__num">Fig. 01 —</span>
+        At PES University, Bangalore. The author, in front of the compass.
+      </figcaption>
+    </figure>
+  </div>
+
+  <a class="hero__scroll" href="#about" aria-label="Scroll">
+    <span>Scroll</span>
+    <svg width="10" height="36" viewBox="0 0 10 36" fill="none"><path d="M5 1 V34 M1 30 L5 34 L9 30" stroke="currentColor" stroke-width="1" stroke-linecap="square"/></svg>
+  </a>
+</section>
+
+<hr class="rule" />
+
+<!-- ─────────── ABOUT ─────────── -->
+<section class="about" id="about">
+  <div class="section__index">
+    <span class="numeral">I</span>
+    <span class="section__label">Note from the author</span>
+  </div>
+  <div class="about__body">
+    <p class="reveal pull">
+      I build <em>infrastructure</em> for the unglamorous middle of finance —
+      the part where a million PDFs become a million answers.
+    </p>
+    <p class="reveal" data-delay="80">
+      For the last two years at <a class="link" href="#experience">Perfios</a>,
+      I&rsquo;ve worked on the systems that turn raw bank statements into
+      decisions: fuzzy name resolution, deduplication, fraud signals, and most
+      recently a Gemini&#8209;backed Q&amp;A layer for insurance underwriters.
+      The work spans Python and R, Flask and Plumber, BiLSTMs and LLMs — but
+      it always comes back to a single question: <em>can this run faster,
+      cheaper, and more correctly than what we shipped last week?</em>
+    </p>
+    <p class="reveal" data-delay="160">
+      Before all of that, a B.Tech in Computer Science at PES University and
+      an IEEE paper on activity recognition that taught me the difference
+      between a model that works and one that ships.
+    </p>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ─────────── SELECTED WORK ─────────── -->
+<section class="work" id="work">
+  <header class="section__head">
+    <div class="section__index">
+      <span class="numeral">II</span>
+      <span class="section__label">Selected work</span>
+    </div>
+    <h2 class="section__title reveal">Four shipped systems, in <em>brief</em>.</h2>
+  </header>
+
+  <ol class="work__list">
+
+    <li class="proj reveal">
+      <div class="proj__num"><span>№</span> 01</div>
+      <div class="proj__head">
+        <h3 class="proj__title">Fuzzy name &amp; de&#8209;duplication pipeline</h3>
+        <span class="proj__org">Perfios · Production</span>
+      </div>
+      <p class="proj__copy">
+        A name‑matching engine for cross‑border financial KYC that survives
+        transliteration, honorifics, and the long tail of Malaysian and Indian
+        naming conventions. Rebuilt around a BiLSTM person/entity classifier
+        with token alignment, then optimised end&#8209;to&#8209;end for memory
+        and latency.
+      </p>
+      <ul class="proj__metrics">
+        <li><span class="num">+47%</span><em>match accuracy</em></li>
+        <li><span class="num">−25%</span><em>false positives</em></li>
+        <li><span class="num">−50%</span><em>latency &amp; memory</em></li>
+        <li><span class="num">+22%</span><em>after BiLSTM rework</em></li>
+      </ul>
+      <div class="proj__tags">
+        <span>Python</span><span>BiLSTM</span><span>Flask · Celery</span><span>PostgreSQL</span>
+      </div>
+    </li>
+
+    <li class="proj reveal">
+      <div class="proj__num"><span>№</span> 02</div>
+      <div class="proj__head">
+        <h3 class="proj__title">On&#8209;prem fuzzy&#8209;match API in R</h3>
+        <span class="proj__org">Perfios · Client deployments</span>
+      </div>
+      <p class="proj__copy">
+        When the data couldn&rsquo;t leave the client&rsquo;s firewall, the
+        service had to. An R Plumber backend with asynchronous execution via
+        <code>mirai</code>, packaged as a reproducible Docker image — designed
+        for partners who measure trust in milliseconds.
+      </p>
+      <ul class="proj__metrics">
+        <li><span class="num">&lt;200ms</span><em>p95 response</em></li>
+        <li><span class="num">100%</span><em>on&#8209;prem, dockerised</em></li>
+        <li><span class="num">async</span><em>via mirai</em></li>
+      </ul>
+      <div class="proj__tags">
+        <span>R</span><span>Plumber</span><span>mirai</span><span>Docker</span>
+      </div>
+    </li>
+
+    <li class="proj reveal">
+      <div class="proj__num"><span>№</span> 03</div>
+      <div class="proj__head">
+        <h3 class="proj__title">Fraud detection engine over bank transactions</h3>
+        <span class="proj__org">Perfios · Production</span>
+      </div>
+      <p class="proj__copy">
+        Large&#8209;scale transaction analysis using Polars and Pandas —
+        joining spend categories, transaction modes, and behavioural signals
+        into a fraud score that outperformed the previous rule&#8209;based stack
+        across every category we measured.
+      </p>
+      <ul class="proj__metrics">
+        <li><span class="num">+28%</span><em>detection accuracy</em></li>
+        <li><span class="num">30K+</span><em>statements / day</em></li>
+        <li><span class="num">Polars</span><em>+ Pandas at scale</em></li>
+      </ul>
+      <div class="proj__tags">
+        <span>Polars</span><span>Pandas</span><span>NumPy</span><span>Python</span>
+      </div>
+    </li>
+
+    <li class="proj reveal">
+      <div class="proj__num"><span>№</span> 04</div>
+      <div class="proj__head">
+        <h3 class="proj__title">Insurance document Q&amp;A on Vertex AI</h3>
+        <span class="proj__org">Perfios · Underwriting</span>
+      </div>
+      <p class="proj__copy">
+        A Gemini&#8209;backed chatbot that lets underwriters ask insurance
+        reports in plain English. Designed the prompt&#8209;engineering layer,
+        retrieval setup, and the guardrails that keep a generative model
+        useful inside a regulated workflow.
+      </p>
+      <ul class="proj__metrics">
+        <li><span class="num">Gemini</span><em>via Vertex AI</em></li>
+        <li><span class="num">RAG</span><em>over PDF reports</em></li>
+        <li><span class="num">NL</span><em>queries, cited answers</em></li>
+      </ul>
+      <div class="proj__tags">
+        <span>Vertex AI</span><span>Gemini</span><span>LLMs</span><span>Vector DB</span>
+      </div>
+    </li>
+
+  </ol>
+</section>
+
+<hr class="rule" />
+
+<!-- ─────────── EXPERIENCE ─────────── -->
+<section class="exp" id="experience">
+  <header class="section__head">
+    <div class="section__index">
+      <span class="numeral">III</span>
+      <span class="section__label">Experience</span>
+    </div>
+    <h2 class="section__title reveal">A single, deep <em>tour of duty</em>.</h2>
+  </header>
+
+  <article class="role reveal">
+    <header class="role__head">
+      <div class="role__top">
+        <h3 class="role__title">Software Development Engineer</h3>
+        <span class="role__date">Aug 2023 — Present</span>
+      </div>
+      <div class="role__sub">
+        <span>Perfios Software Solutions</span>
+        <span class="role__sep">·</span>
+        <span>Bangalore, India</span>
+      </div>
+    </header>
+
+    <ul class="role__bullets">
+      <li>
+        Designed and shipped scalable backend systems for financial data
+        processing — fuzzy name matching, de&#8209;duplication, and entity
+        resolution — that improved match accuracy by
+        <mark>47%</mark> and cut false positives by <mark>25%</mark>.
+      </li>
+      <li>
+        Optimised the matching pipeline end&#8209;to&#8209;end, reducing
+        <mark>latency and memory by 50%</mark> and unlocking higher throughput
+        on the same infrastructure.
+      </li>
+      <li>
+        Built and maintained RESTful APIs in Flask + Celery on PostgreSQL,
+        reliably processing <mark>30,000+ bank statements per day</mark>.
+      </li>
+      <li>
+        Deployed an on&#8209;prem fuzzy&#8209;match API using R Plumber with
+        async <code>mirai</code> execution — <mark>sub&#8209;200ms</mark>
+        responses, fully dockerised for partner environments.
+      </li>
+      <li>
+        Partnered with customers, sales, product, and QA on Malaysian naming
+        patterns; introduced a BiLSTM person/entity classifier with token
+        alignment for a <mark>22%</mark> accuracy lift.
+      </li>
+      <li>
+        Built fraud detection engines on large&#8209;scale bank transaction
+        data using Polars and Pandas, integrating spend&#8209;category and
+        transaction&#8209;mode intelligence for a <mark>28%</mark> accuracy
+        improvement.
+      </li>
+      <li>
+        Developed an insurance document Q&amp;A chatbot on Vertex AI (Gemini),
+        letting underwriters query reports in natural language with
+        precise, context&#8209;driven answers.
+      </li>
+    </ul>
+  </article>
+
+  <article class="role role--edu reveal">
+    <header class="role__head">
+      <div class="role__top">
+        <h3 class="role__title">B.Tech, Computer Science</h3>
+        <span class="role__date">Aug 2019 — Jun 2023</span>
+      </div>
+      <div class="role__sub">
+        <span>PES University</span>
+        <span class="role__sep">·</span>
+        <span>Bangalore, India</span>
+        <span class="role__sep">·</span>
+        <span>CGPA <span class="num">8.4 / 10</span></span>
+      </div>
+    </header>
+  </article>
+</section>
+
+<hr class="rule" />
+
+<!-- ─────────── SKILLS ─────────── -->
+<section class="skills" id="skills">
+  <header class="section__head">
+    <div class="section__index">
+      <span class="numeral">IV</span>
+      <span class="section__label">Toolkit</span>
+    </div>
+    <h2 class="section__title reveal">What I reach for, <em>and why</em>.</h2>
+  </header>
+
+  <div class="skills__grid">
+    <div class="skillset reveal">
+      <h4>Languages</h4>
+      <p class="skillset__note">For shipping services and crunching numbers.</p>
+      <ul>
+        <li>Python</li><li>R</li><li>SQL · PostgreSQL</li>
+        <li>Java</li><li>C / C++</li><li>HTML · CSS</li>
+      </ul>
+    </div>
+
+    <div class="skillset reveal" data-delay="80">
+      <h4>Backend &amp; Frameworks</h4>
+      <p class="skillset__note">From request to response, asynchronously.</p>
+      <ul>
+        <li>Flask</li><li>FastAPI</li><li>Celery</li>
+        <li>R Plumber</li><li>mirai</li><li>RESTful APIs</li>
+      </ul>
+    </div>
+
+    <div class="skillset reveal" data-delay="160">
+      <h4>Data &amp; AI</h4>
+      <p class="skillset__note">For the modelling and the generative side.</p>
+      <ul>
+        <li>Polars · Pandas · NumPy</li>
+        <li>Vertex AI · Gemini</li>
+        <li>LLMs · Prompt engineering</li>
+        <li>BiLSTM · NLP</li>
+        <li>Vector databases</li>
+      </ul>
+    </div>
+
+    <div class="skillset reveal" data-delay="240">
+      <h4>Platform &amp; Tools</h4>
+      <p class="skillset__note">The boring, beloved infrastructure.</p>
+      <ul>
+        <li>Docker</li><li>Git</li><li>Google Cloud (GCP)</li>
+        <li>VS Code · PyCharm · IntelliJ</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ─────────── PUBLICATIONS ─────────── -->
+<section class="pubs" id="writing">
+  <header class="section__head">
+    <div class="section__index">
+      <span class="numeral">V</span>
+      <span class="section__label">Publications</span>
+    </div>
+    <h2 class="section__title reveal">A paper on the messy reality of <em>video</em>.</h2>
+  </header>
+
+  <article class="paper reveal">
+    <div class="paper__meta">
+      <span>IEEE INCET 2023</span>
+      <span class="paper__sep">·</span>
+      <span>May 2023</span>
+      <span class="paper__sep">·</span>
+      <span>Conference paper</span>
+    </div>
+
+    <h3 class="paper__title">
+      Human Activity Recognition for Office Surveillance
+    </h3>
+
+    <p class="paper__abstract">
+      A deep&#8209;learning pipeline — ConvLSTM, GRCNN, and LRCN — for
+      recognising activities in real&#8209;world office surveillance video.
+      The paper covers the full stack: preprocessing noisy footage, feature
+      extraction, and classification. LRCN finished as the most robust
+      architecture across both datasets, generalising well beyond the
+      cleaner baselines.
+    </p>
+
+    <ul class="paper__metrics">
+      <li><span class="num">86.17%</span><em>test accuracy · LRCN</em></li>
+      <li><span class="num">3</span><em>architectures benchmarked</em></li>
+      <li><span class="num">IEEE</span><em>INCET 2023</em></li>
+    </ul>
+  </article>
+</section>
+
+<hr class="rule" />
+
+<!-- ─────────── CONTACT ─────────── -->
+<section class="contact" id="contact">
+  <div class="section__index">
+    <span class="numeral">VI</span>
+    <span class="section__label">Get in touch</span>
+  </div>
+
+  <h2 class="contact__display reveal">
+    Working on something <em>interesting?</em>
+  </h2>
+
+  <p class="contact__lede reveal" data-delay="80">
+    I&rsquo;m open to senior backend &amp; ML&#8209;infra roles —
+    especially the kind where production scale and modelling sit close
+    enough to argue with each other. Drop a line.
+  </p>
+
+  <div class="contact__grid reveal" data-delay="160">
+    <a class="contact__card" href="mailto:nandanaka10@gmail.com">
+      <span class="contact__label">Email</span>
+      <span class="contact__value">nandanaka10@gmail.com</span>
+      <span class="contact__arrow">→</span>
+    </a>
+    <a class="contact__card" href="tel:+917306174620">
+      <span class="contact__label">Phone</span>
+      <span class="contact__value">+91 73061 74620</span>
+      <span class="contact__arrow">→</span>
+    </a>
+    <a class="contact__card" href="https://linkedin.com/in/nandanaka" target="_blank" rel="noopener">
+      <span class="contact__label">LinkedIn</span>
+      <span class="contact__value">in/nandanaka</span>
+      <span class="contact__arrow">↗</span>
+    </a>
+    <a class="contact__card" href="https://github.com/nandanaka" target="_blank" rel="noopener">
+      <span class="contact__label">GitHub</span>
+      <span class="contact__value">@nandanaka</span>
+      <span class="contact__arrow">↗</span>
+    </a>
+  </div>
+
+  <a class="contact__resume reveal" data-delay="240" href="assets/Nandana-KA-Resume.pdf" download>
+    <span>Download résumé · PDF</span>
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1 V10 M2.5 6.5 L6.5 10.5 L10.5 6.5 M1.5 12 H11.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
+  </a>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer class="foot">
+  <div class="foot__row">
+    <span>© 2026 Nandana K A.</span>
+    <span class="foot__dot">·</span>
+    <span>Set in Fraunces &amp; Inter.</span>
+    <span class="foot__dot">·</span>
+    <span>Hand&#8209;built in HTML.</span>
+  </div>
+  <a class="foot__top" href="#top">↑ Back to top</a>
+</footer>
+
+</main>
+
+<script src="reveal.js"></script>
+</body>
+</html>
